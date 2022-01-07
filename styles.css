@@ -1,10 +1,10 @@
-body{
+ibody{
 background:pink;
 text-align: center;
 
 }
 .banner {
- position:absolute;
+ position:relative;
      bottom 0;
      top: 0;
      left:0;
