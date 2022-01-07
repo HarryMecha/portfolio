@@ -3,11 +3,11 @@ text-align: center;
 border:0;
 margin:0;
     font-family: 'Montserrat', serif;
-        font-size: 48px;
+        font-size: 3vw;
 }
 
 p.blurb{
-    font-size: 17px; 
+    font-size: 1.3vw; 
         color:gray;
 }
 
@@ -18,7 +18,8 @@ position:relative;
     left:0;
     right: 0;
     width: 100%;
-    height: 700px;
+    height: 0;
+	 padding-top: 50%;
 }
 
 .overlayleft {
@@ -96,11 +97,55 @@ z-index: 4;
   color: black;
 }
 
+.navbar-center a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar-right {
+  float: right;
+}
+
+
+
 .pfp{
+	position:relative;
+	left: 2.5%;
  background-image: url("images/pfp.png");   
-background-color: rgb(255,255,255);
 background-repeat: no-repeat;
-background-size: 75% 85%;
+background-size: 85% 85%;
 width: 30%;
-    height: 600px;
+    height: 0;
+	 padding-top: 30%;
+	display:table-cell;
+ 
+}
+
+.aboutme{
+text-align: right;
+	margin-right: 5%;
+	font-size:55px;
+	
+}
+span.aboutmetext{
+	text-align: center;
+	color:gray;
+	font-size:2.5vw;
+display:table-cell;
+}
+
+.icons{
+	float: left;
+	width: 33.33%;
+
+	
+}
+
+.links::after {
+  content: "";
+  clear: both;
+  display: table;
 }
