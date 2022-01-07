@@ -3,3 +3,68 @@ background:pink;
 text-align: center;
 
 }
+.banner {
+	bottom 0;
+    top: 0;
+	left:0;
+	right: 0;
+    width: 100%;
+    height: 80vh;
+	overflow:hidden;
+	position:relative;
+	text-align: center;
+  color: black;
+  font-size: 150%;
+}
+.overlayleft {
+position:absolute;
+background: rgba(0,0,0,100);
+	z-index:1;
+	bottom 0;
+    top: 0;
+	left:-37.5%;
+	right: 0;
+    width: 100%;
+    height: 100%;
+	overflow:hidden;
+	clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+	transition: .5s ease;
+}
+
+.overlayright {
+position:absolute;
+background: rgba(0,0,0,1);
+	z-index:1;
+	bottom: 0;
+	top 0;
+	left: 37.5%;
+	right: 0;
+    width: 100%;
+    height: 100%;
+	overflow:hidden;
+	clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+	transition: .5s ease;
+
+}
+
+.overlayleft:hover{
+
+background-position: 50% 40%;
+z-index: 4;
+  left: 0;
+}
+
+
+.overlayright:hover{
+
+background-position: 50% 40%;
+z-index: 4;
+  width: 100%;
+  left: 0;
+}
+
+.overlayleft-text {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
