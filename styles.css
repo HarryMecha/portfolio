@@ -4,7 +4,7 @@ text-align: center;
 
 }
 .banner {
- position:relative;
+ position:absolute;
      bottom 0;
      top: 0;
      left:0;
@@ -20,7 +20,7 @@ text-align: center;
      top: 0;
      left:-37.5%;
      right: 0;
-     width: 50%;
+     width: 100%;
      height: 100%;
      overflow:hidden;
      clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
@@ -35,7 +35,7 @@ text-align: center;
      top 0;
      left: 37.5%;
      right: 0;
-     width: 50%;
+     width: 100%;
      height: 100%;
      overflow:hidden;
      clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
@@ -44,19 +44,48 @@ text-align: center;
 
  }
 
- .overlayleft:hover{
- z-index: 4;
-   width: 100%;
- }
+.overlayleft:hover{
 
- .overlayright:hover{
- z-index: 4;
-   width: 100%;
-   left: 0;
- }
+background-position: 50% 40%;
+z-index: 4;
+  left: 0;
+}
+
+
+.overlayright:hover{
+
+background-position: 50% 40%;
+z-index: 4;
+  width: 100%;
+  left: 0;
+}
 
 .overlayleft-text {
   position: absolute;
   bottom: 100%;
   left: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
 }
