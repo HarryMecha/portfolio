@@ -6,6 +6,11 @@ margin:0;
         font-size: 48px;
 }
 
+p.blurb{
+    font-size: 40px; 
+        color:gray;
+}
+
 .banner {
 position:relative;
     bottom 0;
