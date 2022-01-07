@@ -18,10 +18,10 @@ position:relative;
 
 .overlayleft {
 position:absolute;
-background-image: url(".\images\SSRThumb.png");
+background-image: url("images/SSRThumb.png");
 background-color: rgb(255,255,255);
 background-repeat: no-repeat;
-background-size: 60% 175%;
+background-size: 120% 120%;
     z-index:1;
     bottom 0;
     top: 0;
@@ -36,10 +36,10 @@ background-size: 60% 175%;
 
 .overlayright {
 position:absolute;
-background-image: url(".\images\AGThumb.png");
+background-image: url("images/AGThumb.png");
 background-color: rgb(255,255,255);
 background-repeat: no-repeat;
-background-size: 60% 175%;
+background-size: 120% 120%;
     z-index:2;
     bottom: 0;
     top 0;
@@ -56,12 +56,14 @@ background-size: 60% 175%;
 .overlayleft:hover{
 z-index: 4;
   width: 100%;
+  background-size: 100% 120%;
 }
 
 .overlayright:hover{
 z-index: 4;
   width: 100%;
   left: 0;
+  background-size: 100% 120%;
 }
 
 .overlayleft-text {
@@ -72,7 +74,7 @@ z-index: 4;
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000;
 }
 
 .navbar a {
@@ -89,7 +91,3 @@ z-index: 4;
   color: black;
 }
 
-.navbar a.active {
-  background-color: #04AA6D;
-  color: white;
-}
