@@ -97,7 +97,7 @@ z-index: 4;
 }
 
 .pfp{
- background-image: url("images\pfp.png");   
+background-image: url("images/pfp.png");   
 background-color: rgb(255,255,255);
 background-repeat: no-repeat;
 background-size: 120% 120%;
