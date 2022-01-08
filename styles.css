@@ -6,7 +6,7 @@ margin:0;
         font-size: 3vw;
 }
 
-p.blurb{
+.blurb{
     font-size: 1.3vw; 
         color:gray;
 }
@@ -171,4 +171,23 @@ display:table-cell;
     display: table-cell;
     padding: 5px;
 	vertical-align: top;
+}
+
+.contacticon {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+}
+.contactimg {
+    width: 4vw;
+    height: 4vw;
+}
+.contactlink {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+}
+.contactblurb {
+    color:gray;
+   font-size: 1vw;
 }
