@@ -194,3 +194,11 @@ display:table-cell;
 .projectcontainer{
 	margin: 5% 10% 5% 10%;
 }
+
+.container {
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/AGThumb.png")
+}
