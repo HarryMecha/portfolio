@@ -1,14 +1,16 @@
-body{
-text-align: center;
-border:0;
-margin:0;
+body {
+    text-align: center;
+    border: 0;
+    margin: 0;
     font-family: 'Montserrat', serif;
-        font-size: 3vw;
+    font-size: 3vw;
+    background-color: #2E313B;
 }
 
-.blurb{
-    font-size: 1.3vw; 
-        color:gray;
+.blurb {
+    font-size: 1.6vw;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .banner {
@@ -111,31 +113,40 @@ z-index: 4;
 
 
 
-.pfp{
-	position:relative;
-	left: 7.5%;
- background-image: url("images/pfp.png");   
-background-repeat: no-repeat;
-background-size: 85% 85%;
-width: 100%;
-    height: 0;
-	 padding-top: 100%;
-	 display: block;
-	  margin: 0 auto;
- vertical-align: top;
+.pfp {
+    display: block;
+    width: 60%;
+    max-width: 300px;
+    margin: 40px auto 0 auto;
+   
+    aspect-ratio: 1 / 1;
+    
+    background-image: url("images/pfp.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
-.aboutme{
-text-align: right;
-	margin-right: 5%;
-	font-size:55px;
-	
+.aboutme {
+    text-align: right;
+    margin-right: 5%;
+    font-size: 55px;
+    background-color: #2E313B;
 }
+
 span.aboutmetext{
 	text-align: center;
-	color:gray;
+	color:white;
 	font-size:2.5vw;
 display:table-cell;
+}
+
+span.headertext {
+    text-align: center;
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
 }
 
 .icons{
@@ -152,10 +163,9 @@ display:table-cell;
 }
 
 .profile {
-	text-align: justify;
-    width: 55%;
-	text-align: center;
-	
+    text-align: justify;
+    width: 40%;
+    text-align: center;
 }
 
 
@@ -170,7 +180,7 @@ display:table-cell;
 #cell {
     display: table-cell;
     padding: 5px;
-	vertical-align: top;
+    vertical-align: top;
 }
 
 .contacticon {
@@ -197,7 +207,7 @@ display:table-cell;
 
 .container {
     width: 100%;
-    height: 500px;
+    height: 700px;
     background-position: center;
     background-size: cover;
     background-image: url("images/AGThumb.png");
