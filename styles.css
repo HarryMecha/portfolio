@@ -200,5 +200,11 @@ display:table-cell;
     height: 500px;
     background-position: center;
     background-size: cover;
-    background-image: url("images/AGThumb.png")
+    background-image: url("images/AGThumb.png");
+    background-attachment: fixed;
+
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items: center;
 }
