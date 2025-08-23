@@ -202,9 +202,8 @@ display:table-cell;
     background-size: cover;
     background-image: url("images/AGThumb.png");
     background-attachment: fixed;
-
-    color:white;
-    display:flex;
-    justify-content:center;
+    color: white;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
