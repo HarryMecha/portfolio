@@ -279,7 +279,8 @@ span.headertext {
 .skills-text-container {
     flex: 1;
     min-width: 300px;
-    padding-right: 10vw;
+    padding-right: 0;
+    width: 100%;
     box-sizing: border-box;
 }
 
