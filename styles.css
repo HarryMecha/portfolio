@@ -250,22 +250,23 @@ span.headertext {
     align-items: center;
 }
 
+/* --- Main Container for the Skills Section --- */
 .skills-section {
+    max-width: 1100px; /* Give it a bit more room */
+    margin: 4rem auto; /* Centers the whole section on the page */
+    padding: 2rem;
+    /* --- DESKTOP LAYOUT (Default) --- */
     display: flex;
+    justify-content: center; /* This will now properly center your two columns */
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 5vw;
-    width: 100vw;
-    margin: 0;
-    padding: 2rem 2rem 0 2rem;
-    box-sizing: border-box;
+    gap: 4rem; /* A generous gap for the desktop view */
 }
 
 .skills-image-container {
-    flex: 1; 
-    text-align: center; 
+    flex-basis: 35%; /* Suggests the image takes ~35% of the space */
+    max-width: 250px;
 }
+
 
     .skills-image-container img {
         width: 100%;
@@ -277,18 +278,15 @@ span.headertext {
 
 
 .skills-text-container {
-    flex: 1;
-    min-width: 300px;
-    padding-right: 10vw;
-    box-sizing: border-box;
+    flex-basis: 55%; /* Suggests the text takes ~55% of the space */
+    max-width: 650px; /* But it can't get wider than this */
 }
-
 .skills-list {
     list-style: circle;
     padding: 0;
     margin: 0;
-     column-count: 2;
-    column-gap: 2rem;
+    column-count: 3;
+    column-gap: 3rem;
 }
 
     .skills-list li {
@@ -299,3 +297,18 @@ span.headertext {
         break-inside: avoid;
         color: white;
     }
+
+@media (max-width: 768px) {
+    .skills-section {
+        flex-direction: column; /* Stacks the items vertically */
+        gap: 2rem; /* Reduces the gap for a tighter mobile view */
+    }
+
+    .skills-text-container,
+    .skills-image-container {
+        /* On mobile, remove the basis/width suggestions to let them stack naturally */
+        flex-basis: auto;
+        width: 100%;
+        text-align: center; /* Center the text on mobile */
+    }
+}
