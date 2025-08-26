@@ -72,10 +72,36 @@
 				<li>Possesses strong organisational and communication skills.</li>
 				<li>Proven ability to work effectively in a team environment.</li>
 				<li>Reliable, motivated, and creative individual with a positive attitude.</li>
+				<li>Reliable, motivated, and creative individual with a positive attitude.</li>
+				<li>Proficient in both Java and C#, with a good knowledge of SQL.</li>
+				<li>Possesses strong organisational and communication skills.</li>
+				<li>Proven ability to work effectively in a team environment.</li>
 			</ul>
 		</div>
-		<div class="skills-image-container">
-			<img src="images/graduation.png">
+		<div class="skills-image-container2">
+			<div class="carousel-container">
+
+				<div class="carousel-slides">
+					<figure class="carousel-slide active-slide">
+						<img src="images/ILM Pic.png" alt="Screenshot of Project 1">
+						<figcaption>ILM VFX Crew Photo, 'The Marvel's (2023)'.</figcaption>
+					</figure>
+
+					<figure class="carousel-slide">
+						<img src="images/ILM Pic2.png" alt="Screenshot of Project 2">
+						<figcaption>ILM Technology Credit, 'Star Wars: The Acolyte (2024)' Episodes 1,3,7-8.</figcaption>
+					</figure>
+
+					<figure class="carousel-slide">
+						<img src="images/ILM Pic3.png" alt="Screenshot of Project 3">
+						<figcaption>ILM Technology Credit, 'Star Wars: Skeleton Crew (2024)' Episodes 1-8.</figcaption>
+					</figure>
+				</div>
+
+				<button class="carousel-arrow arrow-prev">&#10094;</button>
+				<button class="carousel-arrow arrow-next">&#10095;</button>
+
+			</div>
 		</div>
 	</div>
 	<hr>
@@ -90,16 +116,61 @@
 		<a href="https://www.linkedin.com/in/harry-mccoy-b6b0301b8">
 			<div class="icons">
 				<img src="images/linkedinLogo.png" style="width:5%">
+			</div>
+		</a>
+		<a href="https://www.youtube.com/channel/UC-wpF9dYZs8le_J9qh-aWlw">
+			<div class="icons">
+				<img src="images/YouTubeLogo.png" style="width:5%">
+			</div>
 		</a>
 	</div>
-	<a href="https://www.youtube.com/channel/UC-wpF9dYZs8le_J9qh-aWlw">
-		<div class="icons">
-			<img src="images/YouTubeLogo.png" style="width:5%">
-	</a>
-	</div>
+	<script>
+		const slides = document.querySelectorAll('.carousel-slide');
+		const prevButton = document.querySelector('.arrow-prev');
+		const nextButton = document.querySelector('.arrow-next');
 
-	</div>
+		let currentSlideIndex = 0;
 
+		// Function to show a specific slide
+		function showSlide(index) {
+			// First, hide all slides by removing the active class
+			slides.forEach(slide => {
+				slide.classList.remove('active-slide');
+			});
+
+			// Then, show the correct slide by adding the active class
+			slides[index].classList.add('active-slide');
+		}
+
+		// Event listener for the 'next' button
+		nextButton.addEventListener('click', () => {
+			// Move to the next slide
+			currentSlideIndex++;
+
+			// If we're at the end, loop back to the first slide
+			if (currentSlideIndex >= slides.length) {
+				currentSlideIndex = 0;
+			}
+
+			showSlide(currentSlideIndex);
+		});
+
+		// Event listener for the 'previous' button
+		prevButton.addEventListener('click', () => {
+			// Move to the previous slide
+			currentSlideIndex--;
+
+			// If we're at the beginning, loop to the last slide
+			if (currentSlideIndex < 0) {
+				currentSlideIndex = slides.length - 1;
+			}
+
+			showSlide(currentSlideIndex);
+		});
+
+		// Initially show the first slide
+		showSlide(currentSlideIndex);
+	</script>
 </body>
 
 </html>

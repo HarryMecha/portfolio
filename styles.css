@@ -242,7 +242,7 @@ span.headertext {
     height: 700px;
     background-position: center;
     background-size: cover;
-    background-image: url("images/AGThumb.png");
+    background-image: url("images/Backdrop.png");
     background-attachment: fixed;
     color: white;
     display: flex;
@@ -250,39 +250,128 @@ span.headertext {
     align-items: center;
 }
 
-/* --- Main Container for the Skills Section --- */
 .skills-section {
-    max-width: 1100px; /* Give it a bit more room */
-    margin: 4rem auto; /* Centers the whole section on the page */
+    max-width: 1100px; 
+    margin: 4rem auto; 
     padding: 2rem;
-    /* --- DESKTOP LAYOUT (Default) --- */
+
     display: flex;
-    justify-content: center; /* This will now properly center your two columns */
+    justify-content: center;
     align-items: center;
-    gap: 4rem; /* A generous gap for the desktop view */
+    gap: 4rem;
 }
 
 .skills-image-container {
-    flex-basis: 35%; /* Suggests the image takes ~35% of the space */
-    max-width: 250px;
+    flex-basis: 50%;
+    max-width: 300px;
+}
+
+.skills-image-container2 {
+    flex-basis: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex: 0 0 750px;
 }
 
 
     .skills-image-container img {
         width: 100%;
-        height: auto;
-        max-width: 1000px; 
-        max-height: 1000px;
-        object-fit: contain;
+        height: 100%;
+        max-width: 1500px;
+        max-height: 1500px;
     }
 
+.skills-image-container2 img {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.skills-image-container2 figure {
+    margin: 0;
+}
+
+.skills-image-container2 figcaption {
+    margin-top: 15px;
+    color: #cccccc;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 2rem auto;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+figure.carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+    figure.carousel-slide.active-slide {
+        display: block;
+    }
+
+    figure.carousel-slide img {
+        display: block;
+        margin: 0 auto; 
+        max-width: 100%;
+        height: auto;
+        max-height: 480px;
+    }
+
+    /* Styling for your figcaption */
+    figure.carousel-slide figcaption {
+        font-size: 0.9rem;
+        font-style: italic;
+        color: #ccc;
+    }
+
+/* Styling for the navigation arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%; /* Position halfway down */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .carousel-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+/* Position the 'previous' arrow on the left */
+.arrow-prev {
+    left: 15px;
+}
+
+/* Position the 'next' arrow on the right */
+.arrow-next {
+    right: 15px;
+}
 
 .skills-text-container {
-    flex-basis: 55%; /* Suggests the text takes ~55% of the space */
-    max-width: 650px; /* But it can't get wider than this */
+    flex: 1;
+    max-width: 650px;
 }
+
 .skills-list {
     list-style: circle;
+    padding-left: 0 !important;
     padding: 0;
     margin: 0;
     column-count: 3;
@@ -298,17 +387,34 @@ span.headertext {
         color: white;
     }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
     .skills-section {
-        flex-direction: column; /* Stacks the items vertically */
-        gap: 2rem; /* Reduces the gap for a tighter mobile view */
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .skills-text-container,
-    .skills-image-container {
-        /* On mobile, remove the basis/width suggestions to let them stack naturally */
+    .skills-image-container,
+    .skills-image-container2 {
         flex-basis: auto;
         width: 100%;
-        text-align: center; /* Center the text on mobile */
+        text-align: center;
+    }
+
+    .carousel-container {
+        min-height: 550px; /* Adjust height for the taller screen */
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    figure.carousel-slide img {
+        max-height: 480px; /* Adjust to fit the container */
+    }
+
+    /* Add any other mobile-specific styles for your list, etc. */
+    .skills-text-container .skills-list {
+        padding-left: 0;
     }
 }
