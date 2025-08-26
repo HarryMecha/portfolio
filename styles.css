@@ -14,70 +14,103 @@ body {
 }
 
 .banner {
-position:relative;
-    bottom 0;
-    top: 0;
-    left:0;
-    right: 0;
+    position: relative;
     width: 100%;
-    height: 0;
-	 padding-top: 50%;
+    height: 60vh;
+    max-height: 600px;
+    overflow: hidden;
+    background: #222;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.6s ease-in-out, left 0.6s ease-in-out, clip-path 0.6s ease-in-out, filter 0.6s ease-in-out;
+}
+
+.text {
+    text-align: center;
+    padding: 2em;
+    max-width: 450px;
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    transition: transform 0.6s ease-in-out;
+}
+
+
 .overlayleft {
-position:absolute;
-background-image: url("images/SSRThumb.png");
-background-color: rgb(255,255,255);
-background-repeat: no-repeat;
-background-size: 120% 120%;
-    z-index:1;
+    position: absolute;
+    overflow: hidden;
+    background-image: url("images/SSRThumb.png");
+    background-color: rgb(255,255,255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
     bottom 0;
     top: 0;
-    left:0;
+    left: 0;
     right: 0;
     width: 60%;
     height: 100%;
-    overflow:auto;
+    overflow: auto;
     clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
-    transition: .5s ease;
+    transition: width 0.5s ease, z-index 0s linear 0.5s;
 }
 
+    .overlayleft .text {
+        transform: translateX(-15%);
+    }
+
 .overlayright {
-position:absolute;
-background-image: url("images/AGThumb.png");
-background-color: rgb(255,255,255);
-background-repeat: no-repeat;
-background-size: 120% 120%;
-    z-index:2;
+    position: absolute;
+    overflow: hidden;
+    background-image: url("images/AGThumb.png");
+    background-color: rgb(255,255,255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
     bottom: 0;
     top 0;
     left: 45%;
     right: 0;
     width: 55%;
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-    transition: .5s ease;
-
+    transition: width 0.5s ease, left 0.5s ease, z-index 0s linear 0.5s;
 }
 
-.overlayleft:hover{
-z-index: 4;
-  width: 100%;
-  background-size: 100% 120%;
+.overlayright .text {
+    transform: translateX(15%);
 }
 
-.overlayright:hover{
-z-index: 4;
-  width: 100%;
-  left: 0;
-  background-size: 100% 120%;
+.overlayleft:hover {
+    z-index: 4;
+    width: 100%;
+    transition: width 0.5s ease 50ms;
 }
 
-.overlayleft-text {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
+    .overlayleft:hover .text {
+        transform: translateX(0);
+    }
+
+.overlayright:hover {
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    transition: width 0.5s ease 50ms, left 0.5s ease 50ms;
+}
+
+.overlayright:hover .text {
+    transform: translateX(0);
 }
 
 .navbar {
@@ -134,18 +167,19 @@ z-index: 4;
     background-color: #2E313B;
 }
 
-span.aboutmetext{
-	text-align: center;
-	color:white;
-	font-size:2.5vw;
-display:table-cell;
+span.aboutmetext {
+    text-align: center;
+    color: white;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    display: table-cell;
 }
 
 span.headertext {
-    text-align: center;
-    color: white;
-    font-size: 4vw;
+    display: block;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
 }
 
 .icons{
@@ -215,3 +249,53 @@ span.headertext {
     justify-content: center;
     align-items: center;
 }
+
+.skills-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5vw;
+    width: 100vw;
+    margin: 0;
+    padding: 2rem 2rem 0 2rem;
+    box-sizing: border-box;
+}
+
+.skills-image-container {
+    flex: 1; 
+    text-align: center; 
+}
+
+    .skills-image-container img {
+        width: 100%;
+        height: auto;
+        max-width: 1000px; 
+        max-height: 1000px;
+        object-fit: contain;
+    }
+
+
+.skills-text-container {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 10vw;
+    box-sizing: border-box;
+}
+
+.skills-list {
+    list-style: circle;
+    padding: 0;
+    margin: 0;
+     column-count: 2;
+    column-gap: 2rem;
+}
+
+    .skills-list li {
+        font-size: clamp(12px, 2.5vw, 20px);
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+        break-inside: avoid;
+        color: white;
+    }
