@@ -380,6 +380,7 @@ figure.carousel-slide {
     width: 100%;
     max-width: 50vw;
     text-align: center;
+    justify-content: center;
 }
 
 .skills-list {
@@ -389,10 +390,11 @@ figure.carousel-slide {
     margin: 0;
     column-count: 3;
     column-gap: 3rem;
+    justify-content: center;
 }
 
     .skills-list li {
-        font-size: clamp(12px, 2.5vw, 20px);
+        font-size: clamp(1px, 2.5vw, 20px);
         margin-bottom: 1rem;
         padding-left: 1.5rem;
         position: relative;
@@ -434,6 +436,10 @@ figure.carousel-slide {
         flex-basis: auto;
         width: 100%;
         text-align: center;
+    }
+
+    .skills-list {
+        column-count: 2;
     }
 
     .carousel-container {
