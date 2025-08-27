@@ -144,7 +144,10 @@ body {
   float: right;
 }
 
-
+.pfp-container {
+    display: flex;
+    justify-content: center;
+}
 
 .pfp {
     display: block;
@@ -282,6 +285,7 @@ span.headertext {
     max-width: 1400px;
     margin: 0 auto;
     flex: 0 0 750px;
+   justify-content: center;
 }
 
 
