@@ -418,6 +418,12 @@ figure.carousel-slide {
         height: 100%;
     }
 
+
+.projectcontainer
+{
+    padding-top: 0 ;
+}
+
 @media (max-width: 1500px) {
     .containerProjects {
         height: 400px;
@@ -425,9 +431,10 @@ figure.carousel-slide {
         background-repeat: no-repeat;
         background-attachment: scroll;
     }
-    
+
     .skills-section {
         flex-direction: column;
+        gap: 20px:
     }
 
     .skills-text-container,
@@ -436,6 +443,8 @@ figure.carousel-slide {
         flex-basis: auto;
         width: 100%;
         text-align: center;
+        margin-top: 0px; /* Reduce space above the video */
+        margin-bottom: 0px;
     }
 
     .skills-list {
@@ -447,8 +456,8 @@ figure.carousel-slide {
         min-height: 250px;
         max-height: 350px;
         width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        margin-top: 0px; /* Reduce space above the video */
+        margin-bottom: 0px; /* Keep the original bottom margin */
     }
 
     figure.carousel-slide img {
