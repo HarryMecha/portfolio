@@ -26,31 +26,63 @@
     <div class="projectcontainer">
         <span class="headertext">LIBERATION OF MT.IRONHOLD</span>
         <div class="skills-section">
-            <div class="skills-image-container">
-                <img src="images/graduation.png" alt="Graduation photo">
+            <div class="skills-image-container2">
+                <div class="carousel-container">
+
+                    <div class="carousel-slides">
+                        <figure class="carousel-slide active-slide">
+                            <img src="images/ILM Pic.png" alt="Screenshot of Project 1">
+                            <figcaption>ILM VFX Crew Photo, 'The Marvel's (2023)'.</figcaption>
+                        </figure>
+
+                        <figure class="carousel-slide">
+                            <img src="images/ILM Pic2.png" alt="Screenshot of Project 2">
+                            <figcaption>ILM Technology Credit, 'Star Wars: The Acolyte (2024)' Episodes 1,3,7-8.</figcaption>
+                        </figure>
+
+                        <figure class="carousel-slide">
+                            <img src="images/ILM Pic3.png" alt="Screenshot of Project 3">
+                            <figcaption>ILM Technology Credit, 'Star Wars: Skeleton Crew (2024)' Episodes 1-8.</figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="carousel-arrow arrow-prev">&#10094;</button>
+                    <button class="carousel-arrow arrow-next">&#10095;</button>
+
+                </div>
             </div>
             <div class="skills-text-container">
-                <span style="font-size: clamp(0.5rem, 1.7vw, 1.5rem); color:white; ">
-                    A small scale RPG within the Unity Game engine via the use of Object Orientated Programming, written in C#, containing player movement;
-                    inventory managment, player profiles and updating saves to a database via SQL.
+                <span class='aboutmetext'>
+                    A reliable and motivated individual, with a positive attitude and creative personality, proficient in both Java and C#;
+                    with a good knowledge of SQL. Possessing strong organisational, communication and team-working skills.                    A reliable and motivated individual, with a positive attitude and creative personality, proficient in both Java and C#;
+                    with a good knowledge of SQL. Possessing strong organisational, communication and team-working skills.
+                    A reliable and motivated individual, with a positive attitude and creative personality, proficient in both Java and C#;
+                    with a good knowledge of SQL. Possessing strong organisational, communication and team-working skills.
+                    A reliable and motivated individual, with a positive attitude and creative personality, proficient in both Java and C#;
+                    with a good knowledge of SQL. Possessing strong organisational, communication and team-working skills.
+                    A reliable and motivated individual, with a positive attitude and creative personality, proficient in both Java and C#;
+                    with a good knowledge of SQL. Possessing strong organisational, communication and team-working skills.
+                    A reliable and motivated individual, with a positive attitude and creative personality, proficient in both Java and C#;
+                    with a good knowledge of SQL. Possessing strong organisational, communication and team-working skills.
+
                 </span>
             </div>
         </div>
-    <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/GHFzw4nHZAo"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
-    </div>
-    <div class="links">
-        <div class="contacticon">
-            <a href="https://github.com/HarryMecha/Small-Scale-RPG">
-                <img class="contactimg" src="images/GitHubLogo.png" />
-            </a>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/GHFzw4nHZAo"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
         </div>
-    </div>
+        <div class="links">
+            <div class="contacticon">
+                <a href="https://github.com/HarryMecha/Small-Scale-RPG">
+                    <img class="contactimg" src="images/GitHubLogo.png" />
+                </a>
+            </div>
+        </div>
     </div>
 
 
@@ -157,11 +189,45 @@
     <a href="https://www.youtube.com/channel/UC-wpF9dYZs8le_J9qh-aWlw">
         <div class="icons">
             <img src="images/YouTubeLogo.png" style="width:5%">
+        </div>
     </a>
-    </div>
+    <script>
+	const slides = document.querySelectorAll('.carousel-slide');
+	const prevButton = document.querySelector('.arrow-prev');
+	const nextButton = document.querySelector('.arrow-next');
 
-    </div>
+	let currentSlideIndex = 0;
 
+	function showSlide(index) {
+		slides.forEach(slide => {
+			slide.classList.remove('active-slide');
+		});
+
+		slides[index].classList.add('active-slide');
+	}
+
+	nextButton.addEventListener('click', () => {
+		currentSlideIndex++;
+
+		if (currentSlideIndex >= slides.length) {
+			currentSlideIndex = 0;
+		}
+
+		showSlide(currentSlideIndex);
+	});
+
+	prevButton.addEventListener('click', () => {
+		currentSlideIndex--;
+
+		if (currentSlideIndex < 0) {
+			currentSlideIndex = slides.length - 1;
+		}
+
+		showSlide(currentSlideIndex);
+	});
+
+	showSlide(currentSlideIndex);
+    </script>
 </body>
 
 </html>

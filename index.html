@@ -130,23 +130,17 @@
 
 		let currentSlideIndex = 0;
 
-		// Function to show a specific slide
 		function showSlide(index) {
-			// First, hide all slides by removing the active class
 			slides.forEach(slide => {
 				slide.classList.remove('active-slide');
 			});
 
-			// Then, show the correct slide by adding the active class
 			slides[index].classList.add('active-slide');
 		}
 
-		// Event listener for the 'next' button
 		nextButton.addEventListener('click', () => {
-			// Move to the next slide
 			currentSlideIndex++;
 
-			// If we're at the end, loop back to the first slide
 			if (currentSlideIndex >= slides.length) {
 				currentSlideIndex = 0;
 			}
@@ -154,12 +148,9 @@
 			showSlide(currentSlideIndex);
 		});
 
-		// Event listener for the 'previous' button
 		prevButton.addEventListener('click', () => {
-			// Move to the previous slide
 			currentSlideIndex--;
 
-			// If we're at the beginning, loop to the last slide
 			if (currentSlideIndex < 0) {
 				currentSlideIndex = slides.length - 1;
 			}
@@ -167,7 +158,6 @@
 			showSlide(currentSlideIndex);
 		});
 
-		// Initially show the first slide
 		showSlide(currentSlideIndex);
 	</script>
 </body>
