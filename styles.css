@@ -235,6 +235,7 @@ span.headertext {
 }
 .projectcontainer{
 	margin: 5% 10% 5% 10%;
+
 }
 
 .container {
@@ -394,6 +395,22 @@ figure.carousel-slide {
         color: white;
     }
 
+.video-wrapper {
+    width: 100%;
+    max-width: 1500px;
+    margin: 30px auto;
+    aspect-ratio: 16 / 9;
+    position: relative;
+}
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
 @media (max-width: 1500px) {
     .containerProjects {
         height: 400px;
@@ -429,4 +446,20 @@ figure.carousel-slide {
     .skills-text-container .skills-list {
         padding-left: 0;
     }
+
+    .video-wrapper {
+        width: 100%;
+        max-width: 900px;
+        margin: 30px auto;
+        aspect-ratio: 16 / 9;
+        position: relative;
+    }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 }
