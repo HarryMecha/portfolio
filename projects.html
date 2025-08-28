@@ -52,9 +52,22 @@
                 </div>
             </div>
             <div class="skills-text-container">
-                <span class='aboutmetext' style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color:white; ">
-                    A concept for an interactive Art Gallery within the Unity Game engine via the use of Object Orientated Programming, written in C#,
-                    containing player movement and interaction with art piece objects.
+                <span class='aboutmetext' style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color: white; text-align:left; ">
+                    My MSc Final Project. A mutliplayer, cross-reality (XR) game made in the <b>Unreal Engine</b> coded in <b>C++</b>, with asynchronous gameplay styles that combines both <b>Virtual Reality (VR)</b> and <b>Augmented Reality (AR)</b>.
+                    One player (AR) plays as a Dark Wizard with a top down view of his domain, Mt. Ironhold, having the ability to manipulate the enviroment, spawn in obstacles, blocking certain exits, creating
+                    a play experience with an emphasis on stratergy to thwart the efforts of the other player from freeing the mountain from the Wizard's control. The Dwarf Player (VR). is fully immersed in VR
+                    traversing through a mysterious enviroment using different powerups to give them advantages over the many hurdles they will face on their journey. <br /><br />
+                    <b>Key Game Development Concepts used:</b><br />
+                    • <b>Entity Pools</b>, for Object Spawning and Lifetime management<br />
+                    • <b>Commands</b>, to handle network synchronicity <br />
+                    • <b>Custom UDP Networking Solution</b>, for mutliplayer capabilities<br />
+                    • <b>Subject/Observer Pattern</b>, for UI interaction<br />
+                    • Use of <b>Oculus VR</b> and <b>Google ARCore</b> Plugins<br /><br />
+                    <b>Platforms:</b><br />
+                    • <b>Meta Quest 2</b><br />
+                    • <b>Android Mobile Devices</b><br /><br />
+
+                    Please see Game Design Document linked below for more details.
 
                 </span>
             </div>
@@ -69,13 +82,58 @@
         </div>
         <div class="links">
             <div class="contacticon">
-                <a href="https://github.com/HarryMecha/Small-Scale-RPG">
+                <a href="https://github.com/HarryMecha/ARVRProject">
                     <img class="contactimg" src="images/GitHubLogo.png" />
+                </a>
+            </div>
+            <div class="contacticon">
+                <a href="docs/Games Design Document - Liberation of Mt.Ironhold.pdf" target="_blank">
+                    <img class="contactimg" src="images/DocumentLogo.png" />
                 </a>
             </div>
         </div>
     </div>
+    <div class="containerProjects" style="background-image: url('images/GamesDevThumb.png');">
 
+    </div>
+
+    <div class="projectcontainer">
+        <span class="headertext">ADVANCED GAME DEVELOPEMENT PROJECT</span>
+        <div class="skills-section">
+            <div class="skills-text-container">
+                <span class='aboutmetext' style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color: white;">
+                    An MSc Group Project, working in a team of 3. A small demo game written in <b>C++</b>. This game was created to showcase many of the advanced games development concpets we had learnt
+                    with our module, in the game you play as a dwarf that must collect potions to restore health and chop wood to be added into their inventory. Once enough wood was acquired they would be able to
+                    shoot fireballs. <br /><br />
+                    <b>Key Game Development Concepts used:</b><br /><br />
+                    • <b>Entity Component System</b>, to handle logic with each entity type holding a bitmask of each component they held. Combinations of these components were required to make use of different systems.<br /><br />
+                    • <b>Command Pattern</b>, commands were queued up for the different input types, abstracting logic from the player class.<br /><br />
+                    • <b>Big Array</b>, this was used to iterate through all of the systems currently in the game and check all of the active entities component bitmask, if they have the corresponding components to the
+                    system it will then run the update function within that system on that entity..<br /><br />
+                    • <b>Subject/Observer Pattern</b>, handles achievments, subjects pointers are held within relevant classes and hold a pointer themselves to an observer, these are notified when a specific requirement
+                    has been achieved, this will then unlock the corresponding achievement.<br /><br />
+                    • <b>Object Pool</b>, created all the necessary entities of each type at the beginning of the game, retrieving entities from the pool when needed and returning them once they were not.
+                    used instead of spawning and destroying entities to save on memory.<br /><br />
+                    <b>Platforms:</b><br />
+                    • <b>PC</b>
+                </span>
+            </div>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/BHhF_qrtUIA?si=5ACUYC6_KH-PWxRP"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        <div class="links">
+            <span class='aboutmetext' style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color: white;">
+                Unfortunately due to the reuse of the assignment by the University, the GitHub Repository for this project is unavailable, for code explanations see video above.
+
+            </span>
+        </div>
+    </div>
 
     <span id="projects-seaker"></span>
     <div class="containerProjects" style="background-image: url('images/SeakerThumb.png');">
@@ -84,10 +142,50 @@
 
     <div class="projectcontainer">
         <span class="headertext">TREASURE SEA-KER</span>
-        <span style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color: white; ">
-            A concept for an interactive Art Gallery within the Unity Game engine via the use of Object Orientated Programming, written in C#,
-            containing player movement and interaction with art piece objects.
-        </span>
+        <div class="skills-section">
+            <div class="skills-text-container">
+                <span class='aboutmetext' style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color: white; text-align: left; ">
+                    An MSc Group Project, working in a team of 4. A First Person Platformer A linear platforming game made in the <b>Unity Game Engine</b> coded in <b>C#</b>, set in an underwater world,
+                    players will explore the environment feeling a sense of discovery as they traverse the created landscape, finding hidden collectibles
+                    as they search to locate lost treasures that have sunk to the sea floor, hopefully seeking to feel a sense of reward. However that reward
+                    will not come without challenge, difficult platforming sections will be laid out for them, including several different types of platform and enemy.<br /><br />
+                    <b>Features worked on:</b><br />
+                    • <b>Character Movement, Harpoon Gun, Combat</b><br />
+                    • <b>Inventory System</b><br />
+                    • <b>Level Platforming Layout</b><br />
+                    • <b>UI and Menus</b><br />
+                    • <b>Entire Tutorial Level</b><br /><br />
+                    <b>Platforms:</b><br />
+                    • <b>PC</b>, available in itch.io link below.
+
+                </span>
+            </div>
+            <div class="skills-image-container2">
+                <div class="carousel-container">
+
+                    <div class="carousel-slides">
+                        <figure class="carousel-slide active-slide">
+                            <img src="images/Seaker1.png" alt="Screenshot of Project 1">
+                            <figcaption>Screenshot of Puzzle Area.</figcaption>
+                        </figure>
+
+                        <figure class="carousel-slide">
+                            <img src="images/Seaker2.png" alt="Screenshot of Project 2">
+                            <figcaption>Screenshot inside Tutorial Area.</figcaption>
+                        </figure>
+
+                        <figure class="carousel-slide">
+                            <img src="images/Seaker3.png" alt="Screenshot of Project 3">
+                            <figcaption>Screenshot of Final Boss Area.</figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="carousel-arrow arrow-prev">&#10094;</button>
+                    <button class="carousel-arrow arrow-next">&#10095;</button>
+
+                </div>
+            </div>
+        </div>
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/Pfb_bbmfl4Y"
                     title="YouTube video player"
@@ -98,23 +196,66 @@
         </div>
         <div class="links">
             <div class="contacticon">
-                <a href="https://github.com/HarryMecha/Art-Gallery-Project">
+                <a href="https://github.com/HarryMecha/Multi-platform-Games-Dev">
                     <img class="contactimg" src="images/GitHubLogo.png" />
+                </a>
+            </div>
+            <div class="contacticon">
+                <a href="https://jsrgolu.itch.io/treasure-sea-ker">
+                    <img class="contactimg" style="width: 65%;" src="images/ItchLogo.png" />
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="containerProjects" style="background-image: url('images/Backdrop.png');">
+    <div class="containerProjects" style="background-image: url('images/CaRPGThumb.png');">
 
     </div>
 
     <div class="projectcontainer">
         <span class="headertext">CARPG PROJECT</span>
-        <span style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color: white; ">
-            A concept for an interactive Art Gallery within the Unity Game engine via the use of Object Orientated Programming, written in C#,
-            containing player movement and interaction with art piece objects.
-        </span>
+        <div class="skills-section">
+            <div class="skills-image-container2">
+                <div class="carousel-container">
+
+                    <div class="carousel-slides">
+                        <figure class="carousel-slide active-slide">
+                            <img src="images/CaRPG1.png" alt="Screenshot of Project 1">
+                            <figcaption>Screenshot of NPC Shop Interaction.</figcaption>
+                        </figure>
+
+                        <figure class="carousel-slide">
+                            <img src="images/CaRPG2.png" alt="Screenshot of Project 2">
+                            <figcaption>Screenshot of The Racing Mini-game.</figcaption>
+                        </figure>
+
+                        <figure class="carousel-slide">
+                            <img src="images/CaRPG3.png" alt="Screenshot of Project 3">
+                            <figcaption>Screenshot of Customisation Menu.</figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="carousel-arrow arrow-prev">&#10094;</button>
+                    <button class="carousel-arrow arrow-next">&#10095;</button>
+
+                </div>
+            </div>
+            <div class="skills-text-container">
+                <span class='aboutmetext' style="font-size: clamp(0.8rem, 1.7vw, 1.5rem); color: white; text-align: left;">
+                    A BSc Group Project, working in a team of 2. A small scale RPG within the <b>Unity Game Engine</b> via the use of Object Orientated Programming, written in <b>C#</b>, containing player movement;
+                    inventory managment, player profiles and updating saves to a database via SQL, racing mini game. <br /><br />
+                    <b>Features worked on:</b><br />
+                    • <b>Car Movement</b><br />
+                    • <b>Inventory System</b><br />
+                    • <b>NPCs including enemy cars</b><br />
+                    • <b>Saving and Loading saves within SQL Database</b><br />
+                    • <b>UI and Menus</b><br />
+                    • <b>Racing Mechanics</b><br /><br />
+                    <b>Platforms:</b><br />
+                    • <b>PC</b>
+                </span>
+            </div>
+        </div>
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/q3Y4KV6aULg?si=48FqGgCD5TNj-uQY"
                     title="YouTube video player"
@@ -125,46 +266,14 @@
         </div>
         <div class="links">
             <div class="contacticon">
-                <a href="https://github.com/HarryMecha/Art-Gallery-Project">
-                    <img class="contactimg" src="images/GitHubLogo.png" />
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="containerProjects" style="background-image: url('images/Backdrop.png');">
-
-    </div>
-
-    <div class="projectcontainer">
-        <img src="images/CARPGThumb.png" style="width:70%">
-        <br>
-        <span style="white-space: pre-line">CaRPG Project</span>
-        <br>
-        <span style="font-size:1.7vw">
-            A small scale RPG within the Unity Game engine via the use of Object Orientated Programming, written in C#, containing player movement;
-            inventory managment, player profiles and updating saves to a database via SQL, racing mini game.
-        </span>
-        <div class="links">
-            <div class="contacticon">
                 <a href="https://github.com/HarryMecha/CaRPG">
                     <img class="contactimg" src="images/GitHubLogo.png" />
                 </a>
             </div>
-            <div class="contacticon">
-                <a href="https://www.youtube.com/watch?v=q3Y4KV6aULg&ab_channel=HarryMcCoyUnityShowcase">
-                    <img class="contactimg" style="height: 5%; width:5%" src="images/YouTubeLogo.png" />
-                </a>
-            </div>
         </div>
     </div>
-
-
-
-    <br>
-    <br>
     <hr>
-    <p style="font-size:1.5vw">Quick Links</p>
+    <p style="font-size:1.5vw; color:white;">Quick Links</p>
 
     <div class="links">
         <div class="icons">
@@ -175,49 +284,49 @@
         <a href="https://www.linkedin.com/in/harry-mccoy-b6b0301b8">
             <div class="icons">
                 <img src="images/linkedinLogo.png" style="width:5%">
+            </div>
+        </a>
+        <a href="https://www.youtube.com/channel/UC-wpF9dYZs8le_J9qh-aWlw">
+            <div class="icons">
+                <img src="images/YouTubeLogo.png" style="width:5%">
+            </div>
         </a>
     </div>
-    <a href="https://www.youtube.com/channel/UC-wpF9dYZs8le_J9qh-aWlw">
-        <div class="icons">
-            <img src="images/YouTubeLogo.png" style="width:5%">
-        </div>
-    </a>
     <script>
-	const slides = document.querySelectorAll('.carousel-slide');
-	const prevButton = document.querySelector('.arrow-prev');
-	const nextButton = document.querySelector('.arrow-next');
+        const carousels = document.querySelectorAll('.carousel-container');
 
-	let currentSlideIndex = 0;
+        carousels.forEach(carousel => {
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const prevButton = carousel.querySelector('.arrow-prev');
+            const nextButton = carousel.querySelector('.arrow-next');
 
-	function showSlide(index) {
-		slides.forEach(slide => {
-			slide.classList.remove('active-slide');
-		});
+            let currentSlideIndex = 0;
 
-		slides[index].classList.add('active-slide');
-	}
+            function showSlide(index) {
+                slides.forEach(slide => {
+                    slide.classList.remove('active-slide');
+                });
+                slides[index].classList.add('active-slide');
+            }
 
-	nextButton.addEventListener('click', () => {
-		currentSlideIndex++;
+            showSlide(currentSlideIndex);
 
-		if (currentSlideIndex >= slides.length) {
-			currentSlideIndex = 0;
-		}
+            nextButton.addEventListener('click', () => {
+                currentSlideIndex++;
+                if (currentSlideIndex >= slides.length) {
+                    currentSlideIndex = 0; 
+                }
+                showSlide(currentSlideIndex);
+            });
 
-		showSlide(currentSlideIndex);
-	});
-
-	prevButton.addEventListener('click', () => {
-		currentSlideIndex--;
-
-		if (currentSlideIndex < 0) {
-			currentSlideIndex = slides.length - 1;
-		}
-
-		showSlide(currentSlideIndex);
-	});
-
-	showSlide(currentSlideIndex);
+            prevButton.addEventListener('click', () => {
+                currentSlideIndex--;
+                if (currentSlideIndex < 0) {
+                    currentSlideIndex = slides.length - 1;
+                }
+                showSlide(currentSlideIndex);
+            });
+        });
     </script>
 </body>
 
